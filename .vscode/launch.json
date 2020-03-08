@@ -1,0 +1,41 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "al",
+            "request": "launch",
+            "name": "Docker Sandbox",
+            "server": "http://bcuserpass07",
+            "serverInstance": "BC",
+            "authentication": "UserPassword",
+            "startupObjectId": 22,
+            "startupObjectType": "Page",
+            "breakOnError": true,
+            "launchBrowser": true
+        },
+        {
+            "name": "Microsoft cloud sandbox",
+            "type": "al",
+            "request": "launch",
+            "startupObjectId": 22,
+            "breakOnError": true,
+            "tenant": "04bc6cd5-a459-4f8d-aada-a7ca8b58c72f",
+            "schemaUpdateMode": "ForceSync",
+            "sandboxName": "TEST1GB"            
+        },
+       {
+            "type": "al",
+            "request": "attach",
+            "breakOnNext": "WebServiceClient",
+            "name": "Cloud API Attach",
+            "authentication": "AAD",
+            "breakOnError": true,
+            "tenant": "04bc6cd5-a459-4f8d-aada-a7ca8b58c72f",
+            "breakOnRecordWrite": false,
+            "enableSqlInformationDebugger": true,
+            "enableLongRunningSqlStatements": true,
+            "longRunningSqlStatementsThreshold": 500,
+            "numberOfSqlStatements": 10      
+        }
+    ]
+}
